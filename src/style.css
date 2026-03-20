@@ -2,49 +2,54 @@ html {
   --active-color: #00acdc;
 }
 
-* {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-ul,
-ol {
-  list-style: none;
-}
-
-a {
-  display: block;
-  text-decoration: none;
-}
-
-img {
-  display: block;
-}
-
 .header {
+  margin: 0;
+  box-sizing: border-box;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
 }
 
+.header__logo--img {
+  display: block;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .header__nav--list {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  list-style: none;
 }
 
 .header__nav--item:not(:last-child) {
+  margin: 0;
+  box-sizing: border-box;
   margin-right: 20px;
 }
 
 .header__nav--link {
+  margin: 0;
+  box-sizing: border-box;
+
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 60px;
 
-  /* Samsung */
   position: relative;
 
   font-family: Roboto, sans-serif;
@@ -52,20 +57,21 @@ img {
   font-size: 12px;
   font-weight: 500;
 
+  text-decoration: none;
   text-transform: uppercase;
 
   color: #000;
 }
 
-a.is-active {
+.header__nav--link.is-active {
   color: var(--active-color);
 }
 
-a:hover {
+.header__nav--link:hover {
   color: var(--active-color);
 }
 
-a.is-active::after {
+.header__nav--link.is-active::after {
   content: '';
 
   position: absolute;
